@@ -1,0 +1,41 @@
+Gradient Descent Algorithm
+
+STEP 1: Find Slope Slope m= sum(x- mean(x))**2 * sum(y-mean(y))**2/sum(x-mean(x))**2
+
+STEP 2: Find Slope Intercept c = mean(y)+m*mean(x)
+
+STEP 3: Find y^ y^=mx+c
+
+STEP 4: Now we have m,c,y^ values in hand. Calculate MSE.
+
+Mean Squared Error MSE = sum(y-y^)**2/n
+
+i.e., MSE = 1/n(SSE)
+
+Sum of Squared Error = Sum of squared error difference between actual and predicted
+
+STEP 5: Determine the learning rate and max number of iterations
+
+STEP 6: Until the max no of iterations calculate altered values of m and c and arrive at multiple MSEs
+
+STEP 7: Calculate altered m and c values,
+
+if univariate - NEW SLOPE = OLD SLOPE +- DELTA
+		NEW INTERCEPT = OLD INTERCEPT +- DELTA
+
+if bivariate - NEW SLOPE = OLD SLOPE - Partial diff(MSE) w.r.t slope
+	       NEW INTERCEPT = OLD INTERCEPT - Partial diff(MSE) w.r.t intercept
+
+Partial diff(MSE) = -2/n summ(y-y^)
+
+STEP 8 : Now, repeat STEP 1 to 4 for every time you get an altered m and c value till the iterations are over
+
+STEP 9 : Out of all the linear regression equations calculated, draw the lines and see which line is near to the global minima and consider it as the best fit.
+
+
+
+
+
+
+
+
